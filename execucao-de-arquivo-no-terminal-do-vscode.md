@@ -351,6 +351,8 @@ sudo systemctl start mysql
 Agora, com esses comandos, você pode instalar os compiladores e interpretadores necessários diretamente pelo terminal do VS Code! 🚀
 ---
 
+
+
 O comando:  
 
 ```bash
