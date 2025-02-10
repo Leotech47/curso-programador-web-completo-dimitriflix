@@ -349,5 +349,67 @@ sudo systemctl start mysql
 | MySQL      | `sudo apt install mysql-server -y` |
 
 Agora, com esses comandos, você pode instalar os compiladores e interpretadores necessários diretamente pelo terminal do VS Code! 🚀
+---
+
+O comando:  
+
+```bash
+pip install python
+```
+não é a forma correta de instalar o **Python**.  
+
+### **Explicação do Comando**
+O `pip` é o **gerenciador de pacotes do Python** e é usado para instalar bibliotecas e módulos do **PyPI** (Python Package Index).  
+
+No entanto, `pip install python` tenta instalar um pacote chamado `python` do PyPI, que **não existe** ou não é o próprio interpretador Python.  
+
+---
+
+### **Forma Correta de Instalar o Python**
+#### **Windows**  
+1. Baixe o instalador oficial no site: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
+2. Durante a instalação, marque **"Add Python to PATH"**  
+3. Verifique se foi instalado corretamente:  
+   ```bash
+   python --version
+   ```
+
+#### **Linux (Debian/Ubuntu)**
+```bash
+sudo apt update
+sudo apt install python3 -y
+```
+Verifique a instalação:
+```bash
+python3 --version
+```
+
+#### **macOS (via Homebrew)**
+```bash
+brew install python
+```
+Verifique a instalação:
+```bash
+python3 --version
+```
+
+---
+
+### **Quando Usar `pip install`?**
+O `pip install` deve ser usado apenas para instalar **bibliotecas e pacotes Python**, por exemplo:
+```bash
+pip install numpy
+pip install requests
+```
+
+Caso tenha tentado `pip install python`, basta ignorar ou desinstalar pacotes indesejados com:
+```bash
+pip uninstall python
+```
+
+Se precisar instalar o **interpretador Python**, siga os métodos corretos acima. 🚀
+
+---
+
 
 
