@@ -172,3 +172,182 @@ Para rodar projetos completos com múltiplos serviços, o **Docker** pode ser ne
 ## **Conclusão**
 Agora você sabe quais **requisitos são necessários** para executar arquivos em **diferentes linguagens** no VS Code. Se precisar de mais detalhes sobre uma linguagem específica, só perguntar! 🚀
 
+Os comandos para instalar o compilador ou interpretador de uma linguagem de programação no terminal do **VS Code** variam conforme o sistema operacional (Windows, Linux ou macOS). Aqui está um guia detalhado para cada linguagem:  
+
+---
+
+## **1. Python**
+### **Windows:**
+1. Baixe e instale o Python no [site oficial](https://www.python.org/downloads/)
+2. Confirme a instalação no terminal:
+   ```bash
+   python --version
+   ```
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install python3 -y   # Debian/Ubuntu
+sudo dnf install python3 -y   # Fedora
+brew install python           # macOS (Homebrew)
+```
+
+---
+
+## **2. Node.js (JavaScript/TypeScript)**
+### **Windows/macOS/Linux:**
+```bash
+# Instalar Node.js e npm
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -  
+sudo apt install -y nodejs   # Debian/Ubuntu
+sudo dnf install -y nodejs   # Fedora
+brew install node            # macOS (Homebrew)
+```
+Confirme a instalação:
+```bash
+node -v
+npm -v
+```
+
+---
+
+## **3. Java (JDK)**
+### **Windows:**
+1. Baixe o JDK no [site da Oracle](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+2. Confirme no terminal:
+   ```bash
+   java -version
+   ```
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install default-jdk -y   # Debian/Ubuntu
+sudo dnf install java-11-openjdk -y  # Fedora
+brew install openjdk@11             # macOS (Homebrew)
+```
+
+---
+
+## **4. C/C++ (GCC e G++)**
+### **Windows:**
+1. Baixe e instale o [MinGW](https://sourceforge.net/projects/mingw/)
+2. Adicione MinGW ao **Path** e verifique:
+   ```bash
+   gcc --version
+   ```
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install build-essential -y  # Debian/Ubuntu
+sudo dnf install gcc gcc-c++ -y      # Fedora
+brew install gcc                     # macOS (Homebrew)
+```
+
+---
+
+## **5. PHP**
+### **Windows:**
+1. Baixe e instale o PHP do [site oficial](https://windows.php.net/download/)
+2. Confirme no terminal:
+   ```bash
+   php -v
+   ```
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install php -y   # Debian/Ubuntu
+sudo dnf install php -y   # Fedora
+brew install php          # macOS (Homebrew)
+```
+
+---
+
+## **6. Ruby**
+### **Windows:**
+1. Baixe e instale do [site oficial](https://rubyinstaller.org/)
+2. Confirme no terminal:
+   ```bash
+   ruby -v
+   ```
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install ruby -y  # Debian/Ubuntu
+sudo dnf install ruby -y  # Fedora
+brew install ruby         # macOS (Homebrew)
+```
+
+---
+
+## **7. Go**
+### **Windows:**
+1. Baixe do [site oficial](https://golang.org/dl/)
+
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install golang-go -y  # Debian/Ubuntu
+sudo dnf install golang -y     # Fedora
+brew install go                # macOS (Homebrew)
+```
+Confirme:
+```bash
+go version
+```
+
+---
+
+## **8. Rust**
+### **Windows/Linux/macOS:**
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+Confirme:
+```bash
+rustc --version
+```
+
+---
+
+## **9. Swift**
+### **Linux/macOS (Terminal):**
+```bash
+sudo apt install swift -y  # Debian/Ubuntu
+brew install swift         # macOS (Homebrew)
+```
+Confirme:
+```bash
+swift --version
+```
+
+---
+
+## **10. SQL (MySQL)**
+### **Windows/Linux/macOS:**
+```bash
+sudo apt install mysql-server -y  # Debian/Ubuntu
+sudo dnf install mysql-server -y  # Fedora
+brew install mysql                # macOS (Homebrew)
+```
+Inicie o servidor:
+```bash
+sudo systemctl start mysql
+```
+
+---
+
+### **Resumo Rápido (Linux/macOS)**
+| Linguagem  | Comando de Instalação |
+|------------|----------------------|
+| Python     | `sudo apt install python3 -y` |
+| Node.js    | `sudo apt install nodejs -y` |
+| Java       | `sudo apt install default-jdk -y` |
+| C/C++      | `sudo apt install build-essential -y` |
+| PHP        | `sudo apt install php -y` |
+| Ruby       | `sudo apt install ruby -y` |
+| Go         | `sudo apt install golang-go -y` |
+| Rust       | `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` |
+| Swift      | `sudo apt install swift -y` |
+| MySQL      | `sudo apt install mysql-server -y` |
+
+Agora, com esses comandos, você pode instalar os compiladores e interpretadores necessários diretamente pelo terminal do VS Code! 🚀
+
+
