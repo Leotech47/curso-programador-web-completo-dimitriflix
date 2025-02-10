@@ -413,5 +413,60 @@ Se precisar instalar o **interpretador Python**, siga os métodos corretos acima
 
 ---
 
+No **Windows**, o VS Code usa o **PowerShell** ou o **Prompt de Comando (CMD)** como terminal. Para instalar o Python diretamente pelo terminal do VS Code, siga estas opções:  
+
+---
+
+### **1. Instalar Python via Winget (Método Recomendado)**
+Se estiver usando **Windows 10 ou 11**, você pode instalar o Python diretamente pelo `winget` (gerenciador de pacotes do Windows):
+
+```powershell
+winget install Python.Python
+```
+Após a instalação, verifique se o Python foi instalado corretamente:
+```powershell
+python --version
+```
+
+---
+
+### **2. Instalar Python via Chocolatey (Alternativa)**
+Se tiver o **Chocolatey** instalado, use:
+
+```powershell
+choco install python -y
+```
+
+Verifique a instalação:
+```powershell
+python --version
+```
+
+---
+
+### **3. Instalar Python Manualmente (Caso `winget` não esteja disponível)**
+Se `winget` não estiver disponível, siga este processo manualmente:
+1. **Baixe o instalador** no site oficial:  
+   👉 [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)  
+2. **Execute o instalador e marque**:  
+   ✅ **"Add Python to PATH"** (muito importante!)  
+3. **Finalize a instalação e verifique no terminal do VS Code**:  
+   ```powershell
+   python --version
+   ```
+
+---
+
+### **4. Atualizar o Python no Windows**
+Se já tiver o Python instalado e quiser atualizar:
+```powershell
+winget upgrade Python.Python
+```
+
+---
+
+### **Conclusão**
+O método mais rápido é usar **`winget install Python.Python`** diretamente no terminal do VS Code. Se o `winget` não estiver disponível, baixe e instale manualmente pelo site oficial. 🚀
+
 
 
