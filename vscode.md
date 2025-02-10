@@ -135,4 +135,149 @@ As extensões aumentam a produtividade. Para instalar:
 Agora você sabe como **instalar, configurar e usar o VSCode**! Com as extensões corretas e boas práticas, ele se torna uma poderosa ferramenta para desenvolvimento de software.
 
 
-    
+# **Criando um Projeto no VS Code e Fazendo Upload para o GitHub**
+
+Aqui está um guia passo a passo para **criar um projeto no VS Code** e **enviá-lo para o GitHub**.
+
+---
+
+## **1. Criando um Projeto no VS Code**
+### **1.1 Abrindo o VS Code**
+1. **Abra o VS Code** no seu computador.
+2. Clique em **File** > **Open Folder...** e escolha a pasta onde deseja criar o projeto.
+3. Se quiser criar uma nova pasta, clique com o botão direito dentro do Explorer do VS Code e selecione **New Folder**.
+
+### **1.2 Criando Arquivos**
+1. No Explorer do VS Code, clique em **New File** para criar arquivos dentro do projeto.
+2. Exemplo: Crie um arquivo chamado `index.html`, `script.js` ou `app.py`, dependendo do tipo de projeto.
+
+---
+
+## **2. Inicializando o Git no Projeto**
+Agora, vamos configurar o **Git** para controlar as versões do código.
+
+### **2.1 Abrindo o Terminal**
+1. No VS Code, **abra o terminal** pressionando `Ctrl + J` ou vá em **View** > **Terminal**.
+
+### **2.2 Inicializando o Repositório Git**
+No terminal, execute:
+```bash
+git init
+```
+Isso cria um repositório Git dentro da pasta do projeto.
+
+### **2.3 Adicionando um Arquivo `.gitignore` (Opcional)**
+Para evitar enviar arquivos desnecessários (ex: `node_modules`, `venv`), crie um arquivo chamado `.gitignore` e adicione regras como:
+
+```
+node_modules/
+venv/
+__pycache__/
+.DS_Store
+```
+
+---
+
+## **3. Criando um Repositório no GitHub**
+Agora, precisamos criar um repositório remoto para armazenar o código no GitHub.
+
+### **3.1 Criando um Novo Repositório**
+1. Acesse **[GitHub](https://github.com/)** e faça login.
+2. Clique no botão **New Repository**.
+3. Escolha um nome para o repositório e, opcionalmente, adicione uma descrição.
+4. **Não marque a opção "Initialize with a README"** (evita conflitos na sincronização inicial).
+5. Clique em **Create Repository**.
+
+O GitHub mostrará instruções com um **link HTTPS ou SSH** do repositório. Copie esse link.
+
+---
+
+## **4. Conectando o Projeto Local ao GitHub**
+Agora, vamos **vincular o projeto local ao repositório remoto**.
+
+### **4.1 Adicionando o Repositório Remoto**
+No terminal do VS Code, execute (substitua pelo seu link do GitHub):
+
+```bash
+git remote add origin https://github.com/seu-usuario/nome-do-repositorio.git
+```
+Se estiver usando **SSH**, use:
+
+```bash
+git remote add origin git@github.com:seu-usuario/nome-do-repositorio.git
+```
+
+### **4.2 Adicionando os Arquivos ao Controle de Versão**
+Agora, adicione todos os arquivos ao Git:
+
+```bash
+git add .
+```
+
+### **4.3 Criando um Commit**
+Crie um commit inicial com uma mensagem:
+
+```bash
+git commit -m "Primeiro commit"
+```
+
+### **4.4 Enviando o Código para o GitHub**
+Agora, envie o código para o repositório remoto:
+
+```bash
+git push -u origin main
+```
+Se o branch principal for `master`, use:
+
+```bash
+git push -u origin master
+```
+
+Agora seu projeto está disponível no GitHub! 🚀
+
+---
+
+## **5. Verificando se o Código Foi Enviado**
+1. Acesse o GitHub e vá até o repositório.
+2. Atualize a página e veja os arquivos do projeto.
+
+---
+
+## **6. Atualizando o Projeto no GitHub**
+Se você fizer alterações no código e quiser atualizar no GitHub, siga estes passos:
+
+1. **Verificar alterações**:
+   ```bash
+   git status
+   ```
+2. **Adicionar os arquivos modificados**:
+   ```bash
+   git add .
+   ```
+3. **Criar um novo commit**:
+   ```bash
+   git commit -m "Atualização do projeto"
+   ```
+4. **Enviar as mudanças para o GitHub**:
+   ```bash
+   git push origin main
+   ```
+
+---
+
+## **7. Clonando um Projeto do GitHub para o VS Code**
+Se precisar baixar um projeto do GitHub para o VS Code, use:
+
+1. No GitHub, copie o link do repositório (HTTPS ou SSH).
+2. No terminal do VS Code, execute:
+
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+
+3. Abra a pasta clonada no VS Code e comece a trabalhar!
+
+---
+
+## **Conclusão**
+Agora você sabe **criar um projeto no VS Code, conectá-lo ao GitHub e fazer uploads de código**. 🚀
